@@ -45,14 +45,23 @@ var movieLists = [
         ]
     }
 ],
+// get result in array
 allVideoIdsInMovieLists = [];
+// now get result in object
+allVideoIdsInMovieListsObject = {};
 
-movieLists.forEach(movieList=>{
-    movieList.videos.forEach(video=>{
-        allVideoIdsInMovieLists.push(video.id);
-    })
+movieLists.forEach(movieList => {
+movieList.videos.forEach(video => {
+allVideoIdsInMovieLists.push(video.id);
+allVideoIdsInMovieListsObject[video.id] = video.id;
+})
 });
 console.log(allVideoIdsInMovieLists);
 // o/p [ 70111470, 654356453, 65432445, 675465 ]
-
-
+console.log(allVideoIdsInMovieListsObject);
+/* 
+{ '675465': 675465,
+'65432445': 65432445,
+'70111470': 70111470,
+'654356453': 654356453 }
+*/
