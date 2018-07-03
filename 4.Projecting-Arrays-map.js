@@ -34,6 +34,6 @@ var newReleasesMov = [
         "bookmark": [{ id: 4, time: 6 }]
     }
 ]
-newReleases.map(video => {
+newReleasesMov.map(video => {
     console.log({ id: video.id, title: video.title });
 });
